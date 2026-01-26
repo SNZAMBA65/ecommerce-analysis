@@ -1,0 +1,41 @@
+
+# Données volumineuses
+
+data/raw/*.csv
+
+data/processed/*.csv
+
+# Fichiers Python
+
+__pycache__/
+
+*.py[cod]
+
+*$py.class
+
+*.so
+
+.Python
+
+env/
+
+venv/
+
+# Jupyter Notebook
+
+.ipynb_checkpoints
+
+# Fichiers système
+
+.DS_Store
+
+Thumbs.db
+
+# Archives
+
+*.zip
+
+# Tableau
+
+*.twb~
+
