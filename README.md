@@ -10,14 +10,14 @@
 
 ## 🎯 Objectif du Projet
 
-Analyser les données d'un site e-commerce, identifier les opportunités d'amélioration et proposer des solutions d'optimisation basées sur des A/B tests statistiquement validés.
+Analyser les données d'un site e-commerce (2,7M d'événements), identifier les opportunités d'amélioration et proposer des solutions d'optimisation basées sur des A/B tests statistiquement validés.
 
 Le projet démontre la capacité à :
-- Exploiter et analyser des données volumineuses (2,7M d'événements)
-- Créer des visualisations pertinentes et un tableau de bord interactif
-- Concevoir et simuler des A/B tests pour optimiser les performances
-- Automatiser un pipeline complet d'analyse de données
-- Documenter et présenter des résultats de manière professionnelle
+- ✅ Exploiter et analyser des données volumineuses
+- ✅ Créer des visualisations pertinentes et un tableau de bord interactif
+- ✅ Concevoir et simuler des A/B tests pour optimiser les performances
+- ✅ Automatiser un pipeline complet d'analyse de données
+- ✅ Documenter et présenter des résultats de manière professionnelle
 
 ---
 
@@ -26,53 +26,53 @@ Le projet démontre la capacité à :
 ecommerce-analysis/
 │
 ├── data/
-│   ├── raw/                      # Données brutes (non versionnées)
-│   │   ├── events.csv            # 2,7M événements utilisateurs
-│   │   ├── category_tree.csv     # Arbre des catégories
-│   │   ├── item_properties_part1.csv
-│   │   └── item_properties_part2.csv
+│   ├── raw/                          # Données brutes (non versionnées)
+│   │   ├── events.csv                # 2,756,101 événements utilisateurs
+│   │   ├── category_tree.csv         # 1,669 catégories
+│   │   ├── item_properties_part1.csv # 11M propriétés produits
+│   │   └── item_properties_part2.csv # 9M propriétés produits
 │   │
-│   └── processed/                # Données traitées (non versionnées)
-│       ├── events_clean.csv      # Données nettoyées et enrichies
-│       ├── kpis_summary.csv      # Résumé des KPIs globaux
-│       ├── daily_kpis.csv        # KPIs agrégés par jour
-│       ├── hourly_analysis.csv   # Analyse par heure de la journée
-│       ├── top_products.csv      # Top 500 produits
-│       ├── events_for_tableau.csv # Échantillon pour Tableau (10%)
-│       ├── ab_tests_results.csv  # Résultats des A/B tests
+│   └── processed/                    # Données traitées (non versionnées)
+│       ├── events_clean.csv          # Données nettoyées et enrichies
+│       ├── events_for_tableau.csv    # Échantillon 10% pour dashboard
+│       ├── kpis_summary.csv          # Résumé des KPIs globaux
+│       ├── daily_kpis.csv            # KPIs agrégés par jour
+│       ├── hourly_analysis.csv       # Analyse par heure
+│       ├── top_products.csv          # Top 500 produits
+│       ├── ab_tests_results.csv      # Résultats des 3 A/B tests
 │       └── optimization_opportunities.csv
 │
 ├── notebooks/
-│   ├── 01_exploration.ipynb      # Exploration et nettoyage des données
-│   ├── 02_analysis.ipynb         # Analyse approfondie et segmentation
-│   └── 03_ab_testing.ipynb       # Simulation et analyse des A/B tests
+│   ├── 01_exploration.ipynb          # Exploration et nettoyage
+│   ├── 02_analysis.ipynb             # Analyse approfondie et segmentation
+│   └── 03_ab_testing.ipynb           # Simulation et analyse A/B tests
 │
 ├── scripts/
-│   └── run_pipeline.py           # Automatisation du pipeline complet
+│   └── run_pipeline.py               # Pipeline d'automatisation complet
+│
+├── streamlit_dashboard.py            # Dashboard interactif Streamlit
 │
 ├── reports/
-│   └── figures/                  # Graphiques générés
-│       ├── conversion_funnel.png
-│       ├── event_distribution.png
-│       ├── hourly_activity.png
-│       ├── top_products.png
-│       ├── user_segmentation.png
-│       ├── cart_abandonment.png
-│       ├── product_conversion_analysis.png
-│       ├── ab_test_checkout.png
-│       ├── ab_test_product_pages.png
-│       ├── ab_test_popups.png
-│       └── ab_tests_summary.png
+│   ├── figures/                      # Graphiques générés (11 PNG)
+│   │   ├── conversion_funnel.png
+│   │   ├── event_distribution.png
+│   │   ├── hourly_activity.png
+│   │   ├── top_products.png
+│   │   ├── user_segmentation.png
+│   │   ├── cart_abandonment.png
+│   │   ├── product_conversion_analysis.png
+│   │   ├── ab_test_checkout.png
+│   │   ├── ab_test_product_pages.png
+│   │   ├── ab_test_popups.png
+│   │   └── ab_tests_summary.png
+│   │
+│   ├── dashboard_screenshots/        # Captures d'écran dashboard
+│   ├── rapport_final.pdf             # Rapport détaillé
+│   └── presentation.pptx             # Présentation finale
 │
-├── tableau/
-│   └── dashboard.twbx            # Dashboard Tableau interactif
-│
-├── presentation/
-│   └── slides.pptx               # Présentation finale
-│
-├── .gitignore                    # Fichiers exclus du versionnement
-├── requirements.txt              # Dépendances Python
-└── README.md                     # Documentation du projet
+├── .gitignore                        # Exclusions Git
+├── requirements.txt                  # Dépendances Python
+└── README.md                         # Documentation du projet
 ```
 
 ---
@@ -82,8 +82,8 @@ ecommerce-analysis/
 ### Prérequis
 
 - Python 3.8+
-- Tableau Public Desktop (gratuit)
 - Git
+- (Optionnel) Environnement virtuel
 
 ### Installation
 ```bash
@@ -91,13 +91,18 @@ ecommerce-analysis/
 git clone https://github.com/SNZAMBA65/ecommerce-analysis.git
 cd ecommerce-analysis
 
+# Créer un environnement virtuel (recommandé)
+python -m venv .venv
+source .venv/bin/activate  # Sur Linux/Mac
+.venv\Scripts\activate     # Sur Windows
+
 # Installer les dépendances
 pip install -r requirements.txt
 ```
 
 ### Exécution du Pipeline Automatisé
 
-Le projet inclut un script d'automatisation qui exécute l'intégralité de l'analyse :
+Le projet inclut un script d'automatisation qui exécute l'intégralité de l'analyse en une seule commande :
 ```bash
 python scripts/run_pipeline.py
 ```
@@ -113,6 +118,20 @@ python scripts/run_pipeline.py
 - 📊 11 graphiques dans `reports/figures/`
 - 📁 8 fichiers CSV dans `data/processed/`
 - 🧪 Résultats A/B tests complets
+
+### Lancer le Dashboard Interactif
+```bash
+streamlit run streamlit_dashboard.py
+```
+
+Le dashboard s'ouvrira automatiquement dans votre navigateur à l'adresse `http://localhost:8501`
+
+**Fonctionnalités du dashboard :**
+- 🏠 Vue d'ensemble (KPIs, funnel, répartition)
+- 📈 Analyse temporelle (tendances, profil horaire)
+- 🛍️ Analyse produits (top produits, conversion)
+- 👥 Segmentation utilisateurs (3 segments)
+- 🧪 Résultats A/B tests (3 tests significatifs)
 
 ### Exécution Manuelle des Notebooks
 
@@ -134,10 +153,10 @@ jupyter notebook
 **Source :** [Retail Rocket E-commerce Dataset](https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset)
 
 **Description :**
-- 2,756,101 événements utilisateurs
-- 1,407,580 visiteurs uniques
-- 235,061 produits différents
-- Période : 137 jours (Mai - Septembre 2015)
+- **2,756,101** événements utilisateurs
+- **1,407,580** visiteurs uniques
+- **235,061** produits différents
+- **Période :** 137 jours (3 mai - 18 septembre 2015)
 
 **Types d'événements :**
 - `view` : Consultation d'un produit (2,664,312 événements - 96.7%)
@@ -148,123 +167,168 @@ jupyter notebook
 
 ## 🔍 Résultats Clés
 
-### Métriques Principales
+### 📌 Métriques Principales
 
 | Métrique | Valeur | Benchmark E-commerce |
 |----------|--------|----------------------|
 | **Taux de conversion global** | 0.84% | ✅ Normal (1-3%) |
-| **Taux conversion panier** | 32.39% | ⚠️ Faible (40-50%) |
-| **Taux abandon de panier** | 71.96% | 🔴 Élevé (60-70%) |
-| **Visiteurs simples** | 97.2% | 🔴 Très élevé |
+| **Taux conversion panier → achat** | 32.39% | ⚠️ Faible (40-50%) |
+| **Taux abandon de panier** | 67.61% | 🔴 Élevé (60-70%) |
+| **Visiteurs actifs** | 2.8% | 🔴 Très faible |
 
-### Insights Comportementaux
+### 💡 Insights Comportementaux
 
-📌 **Heures de pic d'activité :** 17h - 21h (soirée)  
-📌 **Heures creuses :** 9h - 11h (matin)  
-📌 **Acheteurs vs Abandons :** Les acheteurs consultent **3x plus** de produits (15 vs 5 vues)
+**📅 Temporalité :**
+- 🔥 **Heures de pic :** 17h - 21h (soirée)
+- 😴 **Heures creuses :** 9h - 11h (matin)
 
-### Opportunités Identifiées
+**👥 Segmentation :**
+- 💰 **Acheteurs :** 0.8% des visiteurs (11,719 utilisateurs)
+- 🛒 **Panier abandonné :** 1.9% des visiteurs (27,146 utilisateurs)
+- 👁️ **Visiteurs passifs :** 97.3% des visiteurs (1,368,715 utilisateurs)
 
-1. **🔴 Abandon de panier (71.96%)**
-   - Objectif : Réduire à 60%
-   - Action : Simplifier le checkout, ajouter réassurance
+**🎯 Comportement :**
+- Les acheteurs consultent **3x plus** de produits que ceux qui abandonnent (15 vs 5 vues)
+- Les acheteurs ajoutent **2.3 produits** au panier en moyenne
 
-2. **🟡 Conversion globale (0.84%)**
-   - Objectif : Augmenter à 1.5%
-   - Action : Améliorer pages produits, recommandations
+### 🎯 Opportunités Identifiées
 
-3. **🟡 Engagement visiteurs (2.8% actifs)**
-   - Objectif : Atteindre 10%
-   - Action : Pop-ups, offres personnalisées
+| Opportunité | État Actuel | Objectif | Actions Prioritaires |
+|-------------|-------------|----------|---------------------|
+| **Abandon de panier** | 67.61% | 60% | Simplifier checkout, réassurance |
+| **Conversion globale** | 0.84% | 1.5% | Améliorer pages produits |
+| **Engagement visiteurs** | 2.8% | 10% | Pop-ups, offres personnalisées |
 
 ---
 
 ## 🧪 Résultats des A/B Tests
 
-### Test #1 : Simplification du Checkout
+### ✅ Test #1 : Simplification du Checkout
 
-**Hypothèse :** Réduire les étapes du checkout diminue les abandons
+**Hypothèse :** Réduire le nombre d'étapes du processus de checkout diminue les abandons de panier.
 
 | Métrique | Groupe A (Contrôle) | Groupe B (Variante) | Amélioration |
 |----------|---------------------|---------------------|--------------|
-| Taux de conversion | 31.72% | 37.59% | **+18.49%** |
-| P-value | - | 0.0000 | ✅ Significatif |
-| Recommandation | - | **Déployer immédiatement** | - |
+| **Taux de conversion** | 31.72% | 37.59% | **+18.49%** ✅ |
+| **Taille échantillon** | 18,861 utilisateurs | 18,861 utilisateurs | - |
+| **P-value** | - | 0.0000 | Hautement significatif |
 
-**Impact estimé :** +1,106 achats supplémentaires sur la période
+**💰 Impact estimé :** +1,106 achats supplémentaires (~55,300€ de CA additionnel)
+
+**📋 Recommandation :** **Déployer immédiatement** sur 100% du trafic
 
 ---
 
-### Test #2 : Amélioration des Pages Produits
+### ✅ Test #2 : Amélioration des Pages Produits
 
-**Hypothèse :** Meilleures images et descriptions augmentent les ajouts au panier
+**Hypothèse :** Meilleures images, descriptions et avis clients augmentent les ajouts au panier.
 
 | Métrique | Groupe A (Contrôle) | Groupe B (Variante) | Amélioration |
 |----------|---------------------|---------------------|--------------|
-| Taux vue → panier | 2.48% | 4.12% | **+66.51%** |
-| P-value | - | 0.0000 | ✅ Significatif |
-| Recommandation | - | **Déployer sur top produits** | - |
+| **Taux vue → panier** | 2.48% | 4.12% | **+66.51%** ✅ |
+| **Échantillon** | 50 produits (43,999 vues) | 50 produits (50,737 vues) | - |
+| **P-value** | - | 0.0000 | Hautement significatif |
 
-**Impact estimé :** +16,227€ de revenus additionnels
+**💰 Impact estimé :** +16,227€ de revenus additionnels
+
+**📋 Recommandation :** **Déployer sur les top 100 produits** en priorité
 
 ---
 
-### Test #3 : Pop-ups d'Engagement
+### ✅ Test #3 : Pop-ups d'Engagement
 
-**Hypothèse :** Pop-up avec offre augmente l'engagement des visiteurs passifs
+**Hypothèse :** Pop-up avec offre promotionnelle augmente l'engagement des visiteurs passifs.
 
 | Métrique | Groupe A (Contrôle) | Groupe B (Variante) | Amélioration |
 |----------|---------------------|---------------------|--------------|
-| Taux d'engagement | 3.04% | 11.97% | **+293.47%** |
-| P-value | - | 0.0000 | ✅ Significatif |
-| Recommandation | - | **Tester sur segment ciblé** | - |
+| **Taux d'engagement** | 3.04% | 11.97% | **+293.47%** ✅ |
+| **Échantillon** | 500,780 visiteurs | 500,780 visiteurs | - |
+| **P-value** | - | 0.0000 | Hautement significatif |
 
-**Impact estimé :** +44,722 visiteurs engagés
+**💰 Impact estimé :** +44,722 visiteurs engagés (~22,361€ de CA potentiel)
+
+**📋 Recommandation :** **Tester sur segment visiteurs nouveaux** avant déploiement global
+
+---
+
+### 📊 Impact Global des A/B Tests
+
+**💰 Revenus additionnels estimés :** **~93,888€** sur 137 jours  
+**🚀 ROI projeté :** Si coût de déploiement = 10,000€ → **ROI de 840%**
 
 ---
 
 ## 🛠️ Technologies Utilisées
 
-**Langages et Outils :**
-- Python 3.13
-- Jupyter Notebook
-- Tableau Public Desktop
-- Git / GitHub
+### Langages et Outils
+- **Python 3.13**
+- **Jupyter Notebook**
+- **Streamlit** (Dashboard interactif)
+- **Git / GitHub**
 
-**Bibliothèques Python :**
-- `pandas` : Manipulation et analyse de données
-- `numpy` : Calculs numériques
-- `matplotlib` : Visualisations
-- `seaborn` : Graphiques statistiques
-- `scipy` : Tests statistiques (Chi-carré)
+### Bibliothèques Python
+```python
+pandas==2.3.3          # Manipulation de données
+numpy==2.4.1           # Calculs numériques
+matplotlib==3.10.8     # Visualisations
+seaborn==0.13.2        # Graphiques statistiques
+scipy==1.17.0          # Tests statistiques (Chi-carré)
+plotly==6.5.2          # Graphiques interactifs
+streamlit==1.53.1      # Dashboard web
+jupyter==1.1.1         # Notebooks interactifs
+openpyxl==3.1.5        # Manipulation Excel
+```
 
 ---
 
 ## 📈 Compétences Démontrées
 
 ### B-2 : Architecture de Données
-✅ Élaboration d'un cahier des charges d'architecture de données  
-✅ Intégration des contraintes techniques et normes  
-✅ Réponse aux besoins spécifiques de l'entreprise
+✅ Élaboration d'un pipeline de traitement de données  
+✅ Intégration des contraintes techniques (volumétrie, performance)  
+✅ Architecture adaptée aux besoins métier (e-commerce)
 
 ### C-3 : Automatisation des Flux
-✅ Automatisation du pipeline de données  
-✅ Optimisation des performances de l'infrastructure  
-✅ Utilisation de la programmation pour l'automatisation
+✅ Pipeline automatisé (`run_pipeline.py`) exécutable en 1 commande  
+✅ Optimisation des performances (échantillonnage intelligent)  
+✅ Scripts réutilisables et modulaires
 
 ### C-5 : Contrôle Qualité
-✅ Développement de procédures de contrôle qualité  
-✅ Correction des erreurs dans les pipelines  
-✅ Garantie de la qualité des données
+✅ Procédures de nettoyage et validation des données  
+✅ Gestion des valeurs manquantes et aberrantes  
+✅ Tests statistiques pour garantir la fiabilité des résultats
 
 ---
 
-## 📚 Documentation
+## 📚 Méthodologie
 
-- **Rapport complet :** `reports/rapport_final.pdf`
-- **Présentation :** `presentation/slides.pptx`
-- **Dashboard interactif :** `tableau/dashboard.twbx`
-- **Code source commenté :** `notebooks/` et `scripts/`
+### 1. Exploration des Données
+- Chargement et inspection des 4 fichiers CSV
+- Analyse de la structure et de la qualité
+- Détection des valeurs manquantes et doublons
+- Conversion des timestamps et enrichissement temporel
+
+### 2. Analyse Exploratoire
+- Calcul des KPIs principaux
+- Analyse du funnel de conversion
+- Profil horaire et saisonnier
+- Identification des patterns comportementaux
+
+### 3. Segmentation Utilisateurs
+- Création de 3 segments basés sur le comportement
+- Analyse comparative des segments
+- Identification des opportunités par segment
+
+### 4. Simulation A/B Tests
+- Définition des hypothèses d'optimisation
+- Simulation des groupes contrôle et variante
+- Tests statistiques (Chi-carré, p-value)
+- Calcul des intervalles de confiance
+
+### 5. Automatisation et Dashboard
+- Pipeline Python pour reproductibilité
+- Dashboard interactif Streamlit
+- Visualisations dynamiques avec Plotly
 
 ---
 
@@ -274,8 +338,8 @@ jupyter notebook
 ✅ **Versionnement :** Commits réguliers et descriptifs sur GitHub  
 ✅ **Reproductibilité :** Pipeline automatisé en 1 commande  
 ✅ **Documentation :** README complet, docstrings, rapport détaillé  
-✅ **Visualisations :** Graphiques clairs et professionnels  
-✅ **Rigueur statistique :** Tests Chi-carré, p-values, intervalles de confiance
+✅ **Visualisations :** Graphiques clairs, professionnels et interactifs  
+✅ **Rigueur statistique :** Tests Chi-carré, p-values, significativité
 
 ---
 
@@ -283,7 +347,6 @@ jupyter notebook
 
 - **GitHub :** https://github.com/SNZAMBA65/ecommerce-analysis
 - **Dataset :** https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset
-- **Tableau Public :** *(lien à ajouter après publication)*
 
 ---
 
@@ -291,11 +354,27 @@ jupyter notebook
 
 **Samir NZAMBA**  
 Étudiant - Directeur de Projet en Intelligence Artificielle  
-L'École Multimédia  
-[samirnzamba069@gmail.com]  
-[GitHub](https://github.com/SNZAMBA65)
-[Portfolio](https://samir-nzamba.fr)
+L'École Multimédia - Promotion 2025  
+
+💻 [GitHub](https://github.com/SNZAMBA65)
+
+---
+
+## 📝 Licence
+
+Ce projet est réalisé dans le cadre d'un projet académique à L'École Multimédia.  
+Les données sont issues du dataset public Retail Rocket (Kaggle).
+
+---
+
+## 🙏 Remerciements
+
+- L'École Multimédia pour l'encadrement pédagogique
+- Retail Rocket pour la mise à disposition du dataset
+- La communauté open-source pour les outils utilisés
 
 ---
 
 **⭐ N'hésitez pas à explorer le code et les analyses !**
+
+*Dernière mise à jour : 28 janvier 2025*
