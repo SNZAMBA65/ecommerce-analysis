@@ -39,3 +39,14 @@ Thumbs.db
 
 *.twb~
 
+# Exclure les fichiers volumineux
+data/processed/events_clean.csv
+data/processed/optimization_opportunities.csv
+
+# Mais autoriser les fichiers nécessaires au dashboard
+!data/processed/kpis_summary.csv
+!data/processed/daily_kpis.csv
+!data/processed/hourly_analysis.csv
+!data/processed/top_products.csv
+!data/processed/ab_tests_results.csv
+!data/processed/events_for_tableau.csv

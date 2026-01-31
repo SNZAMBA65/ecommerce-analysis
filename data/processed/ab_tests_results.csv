@@ -1,0 +1,4 @@
+Test,Métrique,Groupe_A,Groupe_B,Amélioration,P_value,Significatif,Recommandation
+Test #1 : Checkout simplifié,Taux conversion panier,31.72%,37.59%,+18.49%,0.0000,✅ Oui,Déployer immédiatement
+Test #2 : Pages produits améliorées,Taux vue → panier,2.48%,4.12%,+66.51%,0.0000,✅ Oui,Déployer sur top produits
+Test #3 : Pop-ups engagement,Taux engagement visiteurs,3.04%,11.97%,+293.47%,0.0000,✅ Oui,Tester sur segment ciblé
