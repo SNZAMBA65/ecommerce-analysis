@@ -127,11 +127,11 @@ streamlit run streamlit_dashboard.py
 Le dashboard s'ouvrira automatiquement dans votre navigateur à l'adresse `http://localhost:8501`
 
 **Fonctionnalités du dashboard :**
-- 🏠 Vue d'ensemble (KPIs, funnel, répartition)
-- 📈 Analyse temporelle (tendances, profil horaire)
-- 🛍️ Analyse produits (top produits, conversion)
-- 👥 Segmentation utilisateurs (3 segments)
-- 🧪 Résultats A/B tests (3 tests significatifs)
+- 🏠 Résumé général (KPIs, funnel, répartition)
+- 📅 Activité par jour et heure (tendances, profil horaire)
+- 🛍️ Performance des produits (top produits, conversion)
+- 👥 Types de visiteurs (3 segments comportementaux)
+- 🧪 Tests d'optimisation (3 tests significatifs)
 
 ### Exécution Manuelle des Notebooks
 
@@ -183,21 +183,21 @@ jupyter notebook
 - 😴 **Heures creuses :** 9h - 11h (matin)
 
 **👥 Segmentation :**
-- 💰 **Acheteurs :** 0.8% des visiteurs (11,719 utilisateurs)
+- 💰 **Clients :** 0.8% des visiteurs (11,719 utilisateurs)
 - 🛒 **Panier abandonné :** 1.9% des visiteurs (27,146 utilisateurs)
 - 👁️ **Visiteurs passifs :** 97.3% des visiteurs (1,368,715 utilisateurs)
 
 **🎯 Comportement :**
-- Les acheteurs consultent **3x plus** de produits que ceux qui abandonnent (15 vs 5 vues)
-- Les acheteurs ajoutent **2.3 produits** au panier en moyenne
+- Les clients consultent **3x plus** de produits que ceux qui abandonnent (15 vs 5 vues)
+- Les clients ajoutent **2.3 produits** au panier en moyenne
 
 ### 🎯 Opportunités Identifiées
 
-| Opportunité | État Actuel | Objectif | Actions Prioritaires |
-|-------------|-------------|----------|---------------------|
-| **Abandon de panier** | 67.61% | 60% | Simplifier checkout, réassurance |
-| **Conversion globale** | 0.84% | 1.5% | Améliorer pages produits |
-| **Engagement visiteurs** | 2.8% | 10% | Pop-ups, offres personnalisées |
+| Opportunité | État Actuel | Objectif | Impact Estimé |
+|-------------|-------------|----------|---------------|
+| **Abandon de panier** | 67.61% | 60% | +1,106 achats |
+| **Conversion globale** | 0.84% | 1.5% | +16,227€ |
+| **Engagement visiteurs** | 2.8% | 10% | +22,361€ |
 
 ---
 
@@ -215,7 +215,7 @@ jupyter notebook
 
 **💰 Impact estimé :** +1,106 achats supplémentaires (~55,300€ de CA additionnel)
 
-**📋 Recommandation :** **Déployer immédiatement** sur 100% du trafic
+**📋 Recommandation :** Déployer immédiatement sur 100% du trafic
 
 ---
 
@@ -231,7 +231,7 @@ jupyter notebook
 
 **💰 Impact estimé :** +16,227€ de revenus additionnels
 
-**📋 Recommandation :** **Déployer sur les top 100 produits** en priorité
+**📋 Recommandation :** Déployer sur les top 100 produits en priorité
 
 ---
 
@@ -247,14 +247,15 @@ jupyter notebook
 
 **💰 Impact estimé :** +44,722 visiteurs engagés (~22,361€ de CA potentiel)
 
-**📋 Recommandation :** **Tester sur segment visiteurs nouveaux** avant déploiement global
+**📋 Recommandation :** Tester sur segment visiteurs nouveaux avant déploiement global
 
 ---
 
 ### 📊 Impact Global des A/B Tests
 
 **💰 Revenus additionnels estimés :** **~93,888€** sur 137 jours  
-**🚀 ROI projeté :** Si coût de déploiement = 10,000€ → **ROI de 840%**
+**🚀 Potentiel annuel :** **~250,000€**  
+**📈 ROI projeté :** Si coût de déploiement = 10,000€ → **ROI de 840%**
 
 ---
 
@@ -367,14 +368,7 @@ Les données sont issues du dataset public Retail Rocket (Kaggle).
 
 ---
 
-## 🙏 Remerciements
-
-- L'École Multimédia pour l'encadrement pédagogique
-- Retail Rocket pour la mise à disposition du dataset
-- La communauté open-source pour les outils utilisés
-
----
 
 **⭐ N'hésitez pas à explorer le code et les analyses !**
 
-*Dernière mise à jour : 28 janvier 2025*
+*Dernière mise à jour : 30 janvier 2025*
