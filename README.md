@@ -6,6 +6,8 @@
 **Date :** Janvier 2025  
 **Projet :** DPIA 1 2025 - Bloc 1 - Programmation data avec Python
 
+🔗 **Dashboard en ligne :** [https://ecommerce-analyse.streamlit.app/](https://ecommerce-analyse.streamlit.app/)
+
 ---
 
 ## 🎯 Objectif du Projet
@@ -32,15 +34,15 @@ ecommerce-analysis/
 │   │   ├── item_properties_part1.csv # 11M propriétés produits
 │   │   └── item_properties_part2.csv # 9M propriétés produits
 │   │
-│   └── processed/                    # Données traitées (non versionnées)
-│       ├── events_clean.csv          # Données nettoyées et enrichies
-│       ├── events_for_tableau.csv    # Échantillon 10% pour dashboard
-│       ├── kpis_summary.csv          # Résumé des KPIs globaux
-│       ├── daily_kpis.csv            # KPIs agrégés par jour
-│       ├── hourly_analysis.csv       # Analyse par heure
-│       ├── top_products.csv          # Top 500 produits
-│       ├── ab_tests_results.csv      # Résultats des 3 A/B tests
-│       └── optimization_opportunities.csv
+│   └── processed/                    # Données traitées
+│       ├── kpis_summary.csv          # Résumé des KPIs globaux (versionné)
+│       ├── daily_kpis.csv            # KPIs agrégés par jour (versionné)
+│       ├── hourly_analysis.csv       # Analyse par heure (versionné)
+│       ├── top_products.csv          # Top 500 produits (versionné)
+│       ├── ab_tests_results.csv      # Résultats des 3 A/B tests (versionné)
+│       ├── events_for_tableau.csv    # Échantillon 10% pour dashboard (versionné)
+│       ├── events_clean.csv          # Données nettoyées (non versionné - trop volumineux)
+│       └── optimization_opportunities.csv  # Opportunités (non versionné)
 │
 ├── notebooks/
 │   ├── 01_exploration.ipynb          # Exploration et nettoyage
@@ -77,15 +79,31 @@ ecommerce-analysis/
 
 ---
 
-## 🚀 Installation et Utilisation
+## 🚀 Accès au Dashboard
 
-### Prérequis
+### 🌐 Version en Ligne (Recommandé)
 
+Le dashboard est déployé et accessible directement en ligne :
+
+👉 **[https://ecommerce-analyse.streamlit.app/](https://ecommerce-analyse.streamlit.app/)**
+
+**Avantages :**
+- ✅ Aucune installation nécessaire
+- ✅ Accès instantané depuis n'importe quel navigateur
+- ✅ Données pré-chargées et optimisées
+- ✅ Mise à jour automatique à chaque commit
+
+---
+
+### 💻 Version Locale
+
+Si vous souhaitez exécuter le dashboard localement :
+
+#### Prérequis
 - Python 3.8+
 - Git
-- (Optionnel) Environnement virtuel
 
-### Installation
+#### Installation
 ```bash
 # Cloner le dépôt
 git clone https://github.com/SNZAMBA65/ecommerce-analysis.git
@@ -100,7 +118,18 @@ source .venv/bin/activate  # Sur Linux/Mac
 pip install -r requirements.txt
 ```
 
-### Exécution du Pipeline Automatisé
+#### Lancement
+```bash
+streamlit run streamlit_dashboard.py
+```
+
+Le dashboard s'ouvrira automatiquement dans votre navigateur à l'adresse `http://localhost:8501`
+
+---
+
+## 🔧 Pipeline d'Analyse
+
+### Exécution Automatique
 
 Le projet inclut un script d'automatisation qui exécute l'intégralité de l'analyse en une seule commande :
 ```bash
@@ -118,20 +147,6 @@ python scripts/run_pipeline.py
 - 📊 11 graphiques dans `reports/figures/`
 - 📁 8 fichiers CSV dans `data/processed/`
 - 🧪 Résultats A/B tests complets
-
-### Lancer le Dashboard Interactif
-```bash
-streamlit run streamlit_dashboard.py
-```
-
-Le dashboard s'ouvrira automatiquement dans votre navigateur à l'adresse `http://localhost:8501`
-
-**Fonctionnalités du dashboard :**
-- 🏠 Résumé général (KPIs, funnel, répartition)
-- 📅 Activité par jour et heure (tendances, profil horaire)
-- 🛍️ Performance des produits (top produits, conversion)
-- 👥 Types de visiteurs (3 segments comportementaux)
-- 🧪 Tests d'optimisation (3 tests significatifs)
 
 ### Exécution Manuelle des Notebooks
 
@@ -275,7 +290,8 @@ matplotlib==3.10.8     # Visualisations
 seaborn==0.13.2        # Graphiques statistiques
 scipy==1.17.0          # Tests statistiques (Chi-carré)
 plotly==6.5.2          # Graphiques interactifs
-streamlit==1.53.1      # Dashboard web
+streamlit>=1.30.0      # Dashboard web
+altair<5               # Visualisations (compatible Streamlit)
 jupyter==1.1.1         # Notebooks interactifs
 openpyxl==3.1.5        # Manipulation Excel
 ```
@@ -301,38 +317,6 @@ openpyxl==3.1.5        # Manipulation Excel
 
 ---
 
-## 📚 Méthodologie
-
-### 1. Exploration des Données
-- Chargement et inspection des 4 fichiers CSV
-- Analyse de la structure et de la qualité
-- Détection des valeurs manquantes et doublons
-- Conversion des timestamps et enrichissement temporel
-
-### 2. Analyse Exploratoire
-- Calcul des KPIs principaux
-- Analyse du funnel de conversion
-- Profil horaire et saisonnier
-- Identification des patterns comportementaux
-
-### 3. Segmentation Utilisateurs
-- Création de 3 segments basés sur le comportement
-- Analyse comparative des segments
-- Identification des opportunités par segment
-
-### 4. Simulation A/B Tests
-- Définition des hypothèses d'optimisation
-- Simulation des groupes contrôle et variante
-- Tests statistiques (Chi-carré, p-value)
-- Calcul des intervalles de confiance
-
-### 5. Automatisation et Dashboard
-- Pipeline Python pour reproductibilité
-- Dashboard interactif Streamlit
-- Visualisations dynamiques avec Plotly
-
----
-
 ## 🎓 Bonnes Pratiques Appliquées
 
 ✅ **Code propre :** Respect de PEP 8, commentaires détaillés  
@@ -340,14 +324,38 @@ openpyxl==3.1.5        # Manipulation Excel
 ✅ **Reproductibilité :** Pipeline automatisé en 1 commande  
 ✅ **Documentation :** README complet, docstrings, rapport détaillé  
 ✅ **Visualisations :** Graphiques clairs, professionnels et interactifs  
-✅ **Rigueur statistique :** Tests Chi-carré, p-values, significativité
+✅ **Rigueur statistique :** Tests Chi-carré, p-values, significativité  
+✅ **Déploiement :** Dashboard accessible en ligne 24/7
+
+---
+
+## 📝 Notes de Déploiement
+
+### Gestion des Fichiers Volumineux
+
+⚠️ **Important :** Certains fichiers de données dépassent la limite GitHub de 100 MB :
+- `data/processed/events_clean.csv` (173 MB) - **Non versionné**
+- `data/processed/optimization_opportunities.csv` - **Non versionné**
+
+**Solution adoptée :**
+- Les fichiers essentiels au dashboard (<100 MB) sont versionnés sur GitHub
+- Les fichiers volumineux sont exclus via `.gitignore`
+- Le dashboard en ligne utilise uniquement les fichiers versionnés
+- Pour l'analyse locale complète, exécutez le pipeline pour régénérer tous les fichiers
+
+### Compatibilité Streamlit Cloud
+
+Le `requirements.txt` est optimisé pour le déploiement Streamlit Cloud :
+- `streamlit>=1.30.0` : Version récente et stable
+- `altair<5` : Compatibilité garantie avec Streamlit
 
 ---
 
 ## 🔗 Liens
 
-- **GitHub :** https://github.com/SNZAMBA65/ecommerce-analysis
-- **Dataset :** https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset
+- **Dashboard en ligne :** [https://ecommerce-analyse.streamlit.app/](https://ecommerce-analyse.streamlit.app/)
+- **GitHub :** [https://github.com/SNZAMBA65/ecommerce-analysis](https://github.com/SNZAMBA65/ecommerce-analysis)
+- **Dataset :** [https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset](https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset)
 
 ---
 
@@ -368,7 +376,6 @@ Les données sont issues du dataset public Retail Rocket (Kaggle).
 
 ---
 
+**⭐ N'hésitez pas à explorer le [dashboard en ligne](https://ecommerce-analyse.streamlit.app/) !**
 
-**⭐ N'hésitez pas à explorer le code et les analyses !**
-
-*Dernière mise à jour : 30 janvier 2025*
+*Dernière mise à jour : 31 janvier 2025*
