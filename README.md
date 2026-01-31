@@ -1,4 +1,4 @@
-# 📊 Analyse de Performances et Optimisation d'un Site E-commerce
+# Analyse de performances et optimisation d'un site e-commerce
 
 **Auteur :** Samir NZAMBA  
 **Formation :** Directeur de Projet en Intelligence Artificielle - Année 1  
@@ -6,20 +6,20 @@
 **Date :** Janvier 2025  
 **Projet :** DPIA 1 2025 - Bloc 1 - Programmation data avec Python
 
-🔗 **Dashboard en ligne :** [https://ecommerce-analyse.streamlit.app/](https://ecommerce-analyse.streamlit.app/)
+Dashboard en ligne : https://ecommerce-analyse.streamlit.app/
 
 ---
 
-## 🎯 Objectif du Projet
+## Objectif du projet
 
 Analyser les données d'un site e-commerce (2,7M d'événements), identifier les opportunités d'amélioration et proposer des solutions d'optimisation basées sur des A/B tests statistiquement validés.
 
 Le projet démontre la capacité à :
-- ✅ Exploiter et analyser des données volumineuses
-- ✅ Créer des visualisations pertinentes et un tableau de bord interactif
-- ✅ Concevoir et simuler des A/B tests pour optimiser les performances
-- ✅ Automatiser un pipeline complet d'analyse de données
-- ✅ Documenter et présenter des résultats de manière professionnelle
+- Exploiter et analyser des données volumineuses
+- Créer des visualisations pertinentes et un tableau de bord interactif
+- Concevoir et simuler des A/B tests pour optimiser les performances
+- Automatiser un pipeline complet d'analyse de données
+- Documenter et présenter des résultats de manière professionnelle
 
 ---
 
@@ -79,19 +79,19 @@ ecommerce-analysis/
 
 ---
 
-## 🚀 Accès au Dashboard
+## Accès au dashboard
 
-### 🌐 Version en Ligne (Recommandé)
+### Version en ligne (recommandé)
 
 Le dashboard est déployé et accessible directement en ligne :
 
-👉 **[https://ecommerce-analyse.streamlit.app/](https://ecommerce-analyse.streamlit.app/)**
+https://ecommerce-analyse.streamlit.app/
 
-**Avantages :**
-- ✅ Aucune installation nécessaire
-- ✅ Accès instantané depuis n'importe quel navigateur
-- ✅ Données pré-chargées et optimisées
-- ✅ Mise à jour automatique à chaque commit
+Avantages :
+- Aucune installation nécessaire
+- Accès instantané depuis n'importe quel navigateur
+- Données pré-chargées et optimisées
+- Mise à jour automatique à chaque commit
 
 ---
 
@@ -127,26 +127,26 @@ Le dashboard s'ouvrira automatiquement dans votre navigateur à l'adresse `http:
 
 ---
 
-## 🔧 Pipeline d'Analyse
+## Pipeline d'analyse
 
-### Exécution Automatique
+### Exécution automatique
 
 Le projet inclut un script d'automatisation qui exécute l'intégralité de l'analyse en une seule commande :
 ```bash
 python scripts/run_pipeline.py
 ```
 
-**Ce script exécute automatiquement :**
-1. ✅ Exploration et nettoyage des données (`01_exploration.ipynb`)
-2. ✅ Analyse approfondie et segmentation (`02_analysis.ipynb`)
-3. ✅ Simulation des A/B tests (`03_ab_testing.ipynb`)
+Ce script exécute automatiquement :
+1. Exploration et nettoyage des données (`01_exploration.ipynb`)
+2. Analyse approfondie et segmentation (`02_analysis.ipynb`)
+3. Simulation des A/B tests (`03_ab_testing.ipynb`)
 
-**Durée d'exécution :** ~2-3 minutes
+Durée d'exécution : ~2-3 minutes
 
-**Résultats générés :**
-- 📊 11 graphiques dans `reports/figures/`
-- 📁 8 fichiers CSV dans `data/processed/`
-- 🧪 Résultats A/B tests complets
+Résultats générés :
+- 11 graphiques dans `reports/figures/`
+- 8 fichiers CSV dans `data/processed/`
+- Résultats A/B tests complets
 
 ### Exécution Manuelle des Notebooks
 
@@ -180,33 +180,33 @@ jupyter notebook
 
 ---
 
-## 🔍 Résultats Clés
+## Résultats clés
 
-### 📌 Métriques Principales
+### Métriques principales
 
-| Métrique | Valeur | Benchmark E-commerce |
+| Métrique | Valeur | Benchmark e-commerce |
 |----------|--------|----------------------|
-| **Taux de conversion global** | 0.84% | ✅ Normal (1-3%) |
-| **Taux conversion panier → achat** | 32.39% | ⚠️ Faible (40-50%) |
-| **Taux abandon de panier** | 67.61% | 🔴 Élevé (60-70%) |
-| **Visiteurs actifs** | 2.8% | 🔴 Très faible |
+| **Taux de conversion global** | 0.84% | Normal (1-3%) |
+| **Taux conversion panier → achat** | 32.39% | Faible (40-50%) |
+| **Taux abandon de panier** | 67.61% | Élevé (60-70%) |
+| **Visiteurs actifs** | 2.8% | Très faible |
 
-### 💡 Insights Comportementaux
+### Observations principales
 
-**📅 Temporalité :**
-- 🔥 **Heures de pic :** 17h - 21h (soirée)
-- 😴 **Heures creuses :** 9h - 11h (matin)
+Temporalité :
+- Heures de pic : 17h - 21h (soirée)
+- Heures creuses : 9h - 11h (matin)
 
-**👥 Segmentation :**
-- 💰 **Clients :** 0.8% des visiteurs (11,719 utilisateurs)
-- 🛒 **Panier abandonné :** 1.9% des visiteurs (27,146 utilisateurs)
-- 👁️ **Visiteurs passifs :** 97.3% des visiteurs (1,368,715 utilisateurs)
+Segmentation :
+- Clients : 0.8% des visiteurs (11,719 utilisateurs)
+- Panier abandonné : 1.9% des visiteurs (27,146 utilisateurs)
+- Visiteurs passifs : 97.3% des visiteurs (1,368,715 utilisateurs)
 
-**🎯 Comportement :**
-- Les clients consultent **3x plus** de produits que ceux qui abandonnent (15 vs 5 vues)
-- Les clients ajoutent **2.3 produits** au panier en moyenne
+Comportement :
+- Les clients consultent en moyenne 3x plus de produits que les visiteurs qui abandonnent (15 vs 5 vues)
+- Les clients ajoutent en moyenne 2.3 produits au panier
 
-### 🎯 Opportunités Identifiées
+### Opportunités identifiées
 
 | Opportunité | État Actuel | Objectif | Impact Estimé |
 |-------------|-------------|----------|---------------|
@@ -216,61 +216,61 @@ jupyter notebook
 
 ---
 
-## 🧪 Résultats des A/B Tests
+## Résultats des A/B tests
 
-### ✅ Test #1 : Simplification du Checkout
+### Test #1 : Simplification du checkout
 
 **Hypothèse :** Réduire le nombre d'étapes du processus de checkout diminue les abandons de panier.
 
 | Métrique | Groupe A (Contrôle) | Groupe B (Variante) | Amélioration |
 |----------|---------------------|---------------------|--------------|
-| **Taux de conversion** | 31.72% | 37.59% | **+18.49%** ✅ |
+| **Taux de conversion** | 31.72% | 37.59% | **+18.49%** |
 | **Taille échantillon** | 18,861 utilisateurs | 18,861 utilisateurs | - |
 | **P-value** | - | 0.0000 | Hautement significatif |
 
-**💰 Impact estimé :** +1,106 achats supplémentaires (~55,300€ de CA additionnel)
+Impact estimé : +1,106 achats supplémentaires (~55,300€ de CA additionnel)
 
-**📋 Recommandation :** Déployer immédiatement sur 100% du trafic
+Recommandation : Déployer sur 100% du trafic
 
 ---
 
-### ✅ Test #2 : Amélioration des Pages Produits
+### Test #2 : Amélioration des pages produits
 
 **Hypothèse :** Meilleures images, descriptions et avis clients augmentent les ajouts au panier.
 
 | Métrique | Groupe A (Contrôle) | Groupe B (Variante) | Amélioration |
 |----------|---------------------|---------------------|--------------|
-| **Taux vue → panier** | 2.48% | 4.12% | **+66.51%** ✅ |
+| **Taux vue → panier** | 2.48% | 4.12% | **+66.51%** |
 | **Échantillon** | 50 produits (43,999 vues) | 50 produits (50,737 vues) | - |
 | **P-value** | - | 0.0000 | Hautement significatif |
 
-**💰 Impact estimé :** +16,227€ de revenus additionnels
+Impact estimé : +16,227€ de revenus additionnels
 
-**📋 Recommandation :** Déployer sur les top 100 produits en priorité
+Recommandation : Déployer sur les top 100 produits en priorité
 
 ---
 
-### ✅ Test #3 : Pop-ups d'Engagement
+### Test #3 : Pop-ups d'engagement
 
 **Hypothèse :** Pop-up avec offre promotionnelle augmente l'engagement des visiteurs passifs.
 
 | Métrique | Groupe A (Contrôle) | Groupe B (Variante) | Amélioration |
 |----------|---------------------|---------------------|--------------|
-| **Taux d'engagement** | 3.04% | 11.97% | **+293.47%** ✅ |
+| **Taux d'engagement** | 3.04% | 11.97% | **+293.47%** |
 | **Échantillon** | 500,780 visiteurs | 500,780 visiteurs | - |
 | **P-value** | - | 0.0000 | Hautement significatif |
 
-**💰 Impact estimé :** +44,722 visiteurs engagés (~22,361€ de CA potentiel)
+Impact estimé : +44,722 visiteurs engagés (~22,361€ de CA potentiel)
 
-**📋 Recommandation :** Tester sur segment visiteurs nouveaux avant déploiement global
+Recommandation : Tester sur segment visiteurs nouveaux avant déploiement global
 
 ---
 
-### 📊 Impact Global des A/B Tests
+### Impact global des A/B tests
 
-**💰 Revenus additionnels estimés :** **~93,888€** sur 137 jours  
-**🚀 Potentiel annuel :** **~250,000€**  
-**📈 ROI projeté :** Si coût de déploiement = 10,000€ → **ROI de 840%**
+Revenus additionnels estimés : ~93,888€ sur 137 jours  
+Potentiel annuel estimé : ~250,000€  
+ROI projeté : Si coût de déploiement = 10,000€ → ROI de 840%
 
 ---
 
@@ -298,46 +298,46 @@ openpyxl==3.1.5        # Manipulation Excel
 
 ---
 
-## 📈 Compétences Démontrées
+## Compétences démontrées
 
-### B-2 : Architecture de Données
-✅ Élaboration d'un pipeline de traitement de données  
-✅ Intégration des contraintes techniques (volumétrie, performance)  
-✅ Architecture adaptée aux besoins métier (e-commerce)
+### B-2 : Architecture de données
+- Élaboration d'un pipeline de traitement de données  
+- Intégration des contraintes techniques (volumétrie, performance)  
+- Architecture adaptée aux besoins métier (e-commerce)
 
-### C-3 : Automatisation des Flux
-✅ Pipeline automatisé (`run_pipeline.py`) exécutable en 1 commande  
-✅ Optimisation des performances (échantillonnage intelligent)  
-✅ Scripts réutilisables et modulaires
+### C-3 : Automatisation des flux
+- Pipeline automatisé (`run_pipeline.py`) exécutable en 1 commande  
+- Optimisation des performances (échantillonnage intelligent)  
+- Scripts réutilisables et modulaires
 
-### C-5 : Contrôle Qualité
-✅ Procédures de nettoyage et validation des données  
-✅ Gestion des valeurs manquantes et aberrantes  
-✅ Tests statistiques pour garantir la fiabilité des résultats
+### C-5 : Contrôle qualité
+- Procédures de nettoyage et validation des données  
+- Gestion des valeurs manquantes et aberrantes  
+- Tests statistiques pour garantir la fiabilité des résultats
 
 ---
 
-## 🎓 Bonnes Pratiques Appliquées
+## Bonnes pratiques appliquées
 
-✅ **Code propre :** Respect de PEP 8, commentaires détaillés  
-✅ **Versionnement :** Commits réguliers et descriptifs sur GitHub  
-✅ **Reproductibilité :** Pipeline automatisé en 1 commande  
-✅ **Documentation :** README complet, docstrings, rapport détaillé  
-✅ **Visualisations :** Graphiques clairs, professionnels et interactifs  
-✅ **Rigueur statistique :** Tests Chi-carré, p-values, significativité  
-✅ **Déploiement :** Dashboard accessible en ligne 24/7
+- Code propre : Respect de PEP 8, commentaires détaillés  
+- Versionnement : Commits réguliers et descriptifs sur GitHub  
+- Reproductibilité : Pipeline automatisé en 1 commande  
+- Documentation : README complet, docstrings, rapport détaillé  
+- Visualisations : Graphiques clairs, professionnels et interactifs  
+- Rigueur statistique : Tests Chi-carré, p-values, significativité  
+- Déploiement : Dashboard accessible en ligne 24/7
 
 ---
 
 ## 📝 Notes de Déploiement
 
-### Gestion des Fichiers Volumineux
+### Gestion des fichiers volumineux
 
-⚠️ **Important :** Certains fichiers de données dépassent la limite GitHub de 100 MB :
+**Important :** Certains fichiers de données dépassent la limite GitHub de 100 MB :
 - `data/processed/events_clean.csv` (173 MB) - **Non versionné**
 - `data/processed/optimization_opportunities.csv` - **Non versionné**
 
-**Solution adoptée :**
+Solution adoptée :
 - Les fichiers essentiels au dashboard (<100 MB) sont versionnés sur GitHub
 - Les fichiers volumineux sont exclus via `.gitignore`
 - Le dashboard en ligne utilise uniquement les fichiers versionnés
@@ -351,31 +351,31 @@ Le `requirements.txt` est optimisé pour le déploiement Streamlit Cloud :
 
 ---
 
-## 🔗 Liens
+## Liens
 
-- **Dashboard en ligne :** [https://ecommerce-analyse.streamlit.app/](https://ecommerce-analyse.streamlit.app/)
-- **GitHub :** [https://github.com/SNZAMBA65/ecommerce-analysis](https://github.com/SNZAMBA65/ecommerce-analysis)
-- **Dataset :** [https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset](https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset)
+- Dashboard en ligne : https://ecommerce-analyse.streamlit.app/
+- GitHub : https://github.com/SNZAMBA65/ecommerce-analysis
+- Dataset : https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset
 
 ---
 
-## 📧 Contact
+## Contact
 
 **Samir NZAMBA**  
 Étudiant - Directeur de Projet en Intelligence Artificielle  
 L'École Multimédia - Promotion 2025  
 
-💻 [GitHub](https://github.com/SNZAMBA65)
+GitHub : https://github.com/SNZAMBA65
 
 ---
 
-## 📝 Licence
+## Licence
 
 Ce projet est réalisé dans le cadre d'un projet académique à L'École Multimédia.  
 Les données sont issues du dataset public Retail Rocket (Kaggle).
 
 ---
 
-**⭐ N'hésitez pas à explorer le [dashboard en ligne](https://ecommerce-analyse.streamlit.app/) !**
+N'hésitez pas à explorer le dashboard en ligne : https://ecommerce-analyse.streamlit.app/
 
 *Dernière mise à jour : 31 janvier 2025*
