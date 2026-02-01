@@ -3,7 +3,7 @@
 **Auteur :** Samir NZAMBA  
 **Formation :** Directeur de Projet en Intelligence Artificielle - Année 1  
 **École :** L'École Multimédia  
-**Date :** Janvier 2025  
+**Date :** Janvier 2026  
 **Projet :** DPIA 1 2025 - Bloc 1 - Programmation data avec Python
 
 Dashboard en ligne : https://ecommerce-analyse.streamlit.app/
@@ -378,4 +378,4 @@ Les données sont issues du dataset public Retail Rocket (Kaggle).
 
 N'hésitez pas à explorer le dashboard en ligne : https://ecommerce-analyse.streamlit.app/
 
-*Dernière mise à jour : 31 janvier 2025*
+*Dernière mise à jour : 31 janvier 2026*

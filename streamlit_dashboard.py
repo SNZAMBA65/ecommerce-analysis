@@ -2,7 +2,7 @@
 Dashboard E-commerce - Analyse des Performances
 Auteur: Samir NZAMBA
 Formation: DPIA 1 - L'École Multimédia
-Date: Janvier 2025
+Date: Janvier 2026
 """
 
 import streamlit as st
@@ -866,6 +866,6 @@ st.markdown("---")
 st.markdown("""
 <div style='text-align: center; color: #95a5a6; font-size: 0.9rem; padding: 20px 0;'>
     <p><strong>Dashboard E-commerce</strong> - Analyse des performances</p>
-    <p>Samir NZAMBA | L'École Multimédia | Janvier 2025</p>
+    <p>Samir NZAMBA | L'École Multimédia | Janvier 2026</p>
 </div>
 """, unsafe_allow_html=True)
